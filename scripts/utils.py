@@ -9,7 +9,7 @@ def load_data(test_file, store_file, sample_submission_file, train_file):
     train_data = pd.read_csv(train_file)
     return test_data, store_data, sample_submission, train_data
 
-def merge_data(test_data, store_data, sample_submission, train_data):
+#def merge_data(test_data, store_data, sample_submission, train_data):
     """Merge test and train data with store data and sample submission."""
     merged_test_data = pd.merge(test_data, store_data, on='Store', how='left')
     merged_train_data = pd.merge(train_data, store_data, on='Store', how='left')
